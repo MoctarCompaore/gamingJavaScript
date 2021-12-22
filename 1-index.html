@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>GAMING-IST</title>
+    <style>
+    	* { padding: 0; margin: 0; }
+    	canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="480" height="320"></canvas>
+
+<script>
+	// JavaScript code goes here
+	
+	var canvas = document.getElementById("myCanvas");
+    var contexte = canvas.getContext("2d");
+	// Dessinons un rectangle bleu
+	contexte.beginPath();
+	contexte.rect(20, 40, 50, 50);
+	contexte.fillStyle = "#007eca";
+	contexte.fill();
+	contexte.closePath();
+	
+	// Dessinons un cercle vert
+	contexte.beginPath();
+	contexte.arc(240, 160, 20, 0, Math.PI*2, false);
+	contexte.fillStyle = "green";
+	contexte.fill();
+	contexte.closePath();
+	
+	
+	//le contour
+	contexte.beginPath();
+	contexte.rect(160, 10, 100, 40);
+	contexte.strokeStyle = "rgba(0, 0, 255, 0.5)";
+	//contexte.fillStyle = "red";
+	contexte.stroke();
+	//contexte.fill();
+	contexte.closePath();
+</script>
+
+</body>
+</html>
